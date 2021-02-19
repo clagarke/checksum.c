@@ -22,7 +22,7 @@ int main (int argc, char * argv[], char ** envp) {
   int sum = 0;   
   byte checksum; 
   byte complement;
-  byte header[10]
+  byte header[10];
 
   int checksumposition = 5; 
   int quotient; 
