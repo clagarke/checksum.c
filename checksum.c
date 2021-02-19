@@ -3,8 +3,8 @@
 /* Author: Garrette Clarke      */
 /* Date:    2/16/21             */
 /********************************/
-/* Description:                 */
-/* Validation Checks:           */
+/* Description: Takes in numbers as bytes and then computes a checksum and its complement and checks if the two are the same. */
+/* Validation Checks: Check if any bounds are exceeded and if checksum/complement is computed correctly. */
 /* Enhancements:                */
 /********************************/
 
@@ -33,7 +33,6 @@ int main (int argc, char * argv[], char ** envp) {
   int retval;
   
   retval = read(STDIN_FILENO, &header, 10);  
-```
 
     
     for (int i = 0; i < count; i++) {
@@ -56,8 +55,6 @@ int main (int argc, char * argv[], char ** envp) {
 
     
 
-
-```
   fprintf(stdout, "Stored Checksum: %d, Computed Checksum: %d\n", checksum, complement);
   if (checksum != complement ) {
     fprintf(stderr, "Error Detected!\n"); 
